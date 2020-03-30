@@ -1,0 +1,12 @@
+{
+  "name": "templates",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/mesquini/templates.git",
+  "author": "victor.mesquini <mesquini@live.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "dev:debug": "nodemon --inspect src/server.js"
+  }
+}
