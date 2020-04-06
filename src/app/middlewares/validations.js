@@ -1,12 +1,19 @@
 import { Joi, Segments, celebrate } from 'celebrate';
 
+export function session() {
+  return celebrate({
+    [Segments.BODY]: Joi.object().keys({
+      email: Joi.string().email().required(),
+      password: Joi.string().required(),
+    }),
+  });
+}
+
 export function post() {
   return celebrate({
     [Segments.BODY]: Joi.object().keys({
       title: Joi.string().required(),
-      description: Joi.string()
-        .required()
-        .min(15),
+      description: Joi.string().required().min(15),
       value: Joi.number().required(),
     }),
   });
