@@ -1,6 +1,8 @@
 # Backend Intermediary
 
-> yarn add dotenv knex express celebrate cors jsonwebtoken mongoose multer helmet morgan
+## Initial
+
+> yarn add dotenv express celebrate cors jsonwebtoken mongoose multer helmet morgan aws-sdk multer-s3
 
 > yarn add -D eslint prettier nodemon sucrase
 

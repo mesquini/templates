@@ -6,6 +6,7 @@ import multerConfig from './configs/multer';
 import auth from './app/middlewares/auth';
 
 import SessionController from './app/controllers/SessionController';
+import UserController from './app/controllers/UserController';
 
 import {
   session,
@@ -17,8 +18,13 @@ import {
 const routes = express.Router();
 const upload = multer(multerConfig);
 
-routes.post('/sessions', session, SessionController);
+routes.post('/session', session, SessionController);
+routes.post('/user', UserController.store);
 
 routes.use(auth);
+
+routes.get('/user', UserController.index);
+routes.put('/user', UserController.update);
+routes.delete('/user', UserController.delete);
 
 export default routes;

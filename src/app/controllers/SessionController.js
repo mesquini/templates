@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 
 import User from '../models/User';
-import authConfig from '../../config/auth';
+import authConfig from '../../configs/auth';
 
 export default async (req, res) => {
   const { email, password } = req.body;
