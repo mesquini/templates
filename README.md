@@ -1,6 +1,6 @@
 # Backend Basic
 
-> yarn add dotenv knex express celebrate cors
+> yarn add dotenv knex express celebrate cors morgan helmet
 
 > yarn add -D eslint prettier nodemon sucrase
 

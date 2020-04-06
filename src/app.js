@@ -2,6 +2,8 @@ import 'dotenv/config';
 
 import express from 'express';
 import cors from 'cors';
+import helmet from 'helmet';
+import morgan from 'morgan';
 import routes from './routes';
 import { errors } from 'celebrate';
 
@@ -17,6 +19,9 @@ class App {
 
   middlewares() {
     this.server.use(express.json());
+    this.server.use(express.urlencoded({ extended: true }));
+    this.server.use(morgan('dev'));
+    this.server.use(helmet());
     this.server.use(cors());
     this.server.use(errors());
   }
